@@ -4,6 +4,17 @@
 
 Sett opp en .NET API via Test Dreven Utvikling.
 
+### Setup Test project
+
+```sh
+# Initialize solution
+dotnet new sln -n TddIntro
+# Add new test project
+dotnet new xunit -n TddIntro.Tests
+# Add test project to solution
+dotnet sln add TddIntro.Tests
+```
+
 ## Uke 2 SOA
 
 Pakke ned APIen i en container og sett den opp i et Docker Compose system, med ingress og database.
