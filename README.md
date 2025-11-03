@@ -15,11 +15,37 @@ dotnet new xunit -n TddIntro.Tests
 dotnet sln add TddIntro.Tests
 ```
 
+### Add new project and connect them
+
+```sh
+# Add new project (class)
+dotnet new class --name Calculator
+# Add class as dependency of Test project
+dotnet add TddIntro.Tests reference Calculator
+```
+
 ### Run all tests
 
 ```sh
 dotnet test
 ```
+
+**Reference in test module**:
+```csharp
+// Poor naming, but shows how you reference <Namespace>.<ClassName>.
+var calc = new Calculator.Calculator();
+```
+
+```csharp
+// Using statements "strips" the need for namespace specifiers.
+using Calculator;
+
+var calc = new Calculator();
+```
+
+### Sketches
+
+![Sketch from lecture](/docs/sketches/tdd-scientific-method-for-engineers.excalidraw.png)
 
 ## Uke 2 SOA
 
