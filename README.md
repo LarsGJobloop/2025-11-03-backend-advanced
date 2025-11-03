@@ -15,6 +15,12 @@ dotnet new xunit -n TddIntro.Tests
 dotnet sln add TddIntro.Tests
 ```
 
+### Run all tests
+
+```sh
+dotnet test
+```
+
 ## Uke 2 SOA
 
 Pakke ned APIen i en container og sett den opp i et Docker Compose system, med ingress og database.
