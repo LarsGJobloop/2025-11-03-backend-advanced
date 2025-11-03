@@ -15,4 +15,19 @@ public class UnitTest1
         // Assert
         Assert.Equal(4, result);
     }
+
+    [Fact]
+    public void Test2()
+    {
+        // Arrange
+        var a = 10;
+        var b = 10;
+        var expected = 100;
+
+        // Act
+        var result = a * b;
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
 }
