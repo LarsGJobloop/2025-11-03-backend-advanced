@@ -19,7 +19,7 @@ dotnet sln add TddIntro.Tests
 
 ```sh
 # Add new project (class)
-dotnet new class --name Calculator
+dotnet new classlib --name Calculator
 # Add class as dependency of Test project
 dotnet add TddIntro.Tests reference Calculator
 ```
