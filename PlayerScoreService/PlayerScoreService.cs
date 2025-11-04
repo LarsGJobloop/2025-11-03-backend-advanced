@@ -6,4 +6,9 @@ public class PlayerScoreService
   {
     return null;
   }
+
+  public void Add(string playerAlias, int score)
+  {
+
+  }
 }
