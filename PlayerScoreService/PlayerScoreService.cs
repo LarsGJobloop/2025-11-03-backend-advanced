@@ -26,6 +26,15 @@ public class PlayerScoreService
 
   public void Add(string playerAlias, int score)
   {
-    _score.Add(playerAlias, score);
+    var isRegistered = _score.TryGetValue(playerAlias, out int oldScore);
+
+    if (isRegistered)
+    {
+      _score[playerAlias] += score;
+    }
+    else
+    {
+      _score.Add(playerAlias, score);
+    }
   }
 }
