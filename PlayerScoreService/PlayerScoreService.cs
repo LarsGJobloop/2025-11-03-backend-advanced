@@ -1,6 +1,6 @@
 ﻿namespace PlayerScoreService;
 
-public class Class1
+public class PlayerScoreService
 {
 
 }
