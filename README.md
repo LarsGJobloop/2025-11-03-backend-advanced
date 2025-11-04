@@ -43,6 +43,10 @@ using Calculator;
 var calc = new Calculator();
 ```
 
+## Game Platform Services
+
+![Inital sketch of Game Platform](/docs/sketches/game-platform.excalidraw.png)
+
 ### Sketches
 
 ![Sketch from lecture](/docs/sketches/tdd-scientific-method-for-engineers.excalidraw.png)
