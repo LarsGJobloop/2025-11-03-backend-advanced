@@ -4,6 +4,6 @@ public class PlayerScoreService
 {
   public int? GetScore(string playerAlias)
   {
-    return 1;
+    return null;
   }
 }
