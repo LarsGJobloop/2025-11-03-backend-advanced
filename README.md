@@ -49,7 +49,7 @@ var calc = new Calculator();
 
 ### Setting up Web Server Tests
 
-- Setup Commands
+1. Setup Commands
 
     ```sh
     # Create web API project
@@ -61,6 +61,12 @@ var calc = new Calculator();
     # Add everything to the solution
     dotnet sln add PlayerScoreApi
     dotnet sln add PlayerScoreService.E2E
+    ```
+
+2. Vi trenger en liten ekstra pakke fra [nuget.org](https://www.nuget.org/packages/Microsoft.AspNetCore.Mvc.Testing) som hjelper å teste REST/MVC APIer
+
+    ```sh
+    dotnet add PlayerScoreService.E2E package Microsoft.AspNetCore.Mvc.Testing
     ```
 
 ### Sketches
