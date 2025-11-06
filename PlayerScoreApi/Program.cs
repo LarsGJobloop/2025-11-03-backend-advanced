@@ -1,7 +1,10 @@
 var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
 
-app.MapGet("/", () => "Hello World!");
+app.MapGet("/score/{playerAlias}", (string playerAlias) =>
+{
+  return new { PlayerAlias = playerAlias };
+});
 
 app.Run();
 
