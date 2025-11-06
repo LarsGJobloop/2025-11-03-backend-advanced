@@ -47,6 +47,22 @@ var calc = new Calculator();
 
 ![Inital sketch of Game Platform](/docs/sketches/game-platform.excalidraw.png)
 
+### Setting up Web Server Tests
+
+- Setup Commands
+
+    ```sh
+    # Create web API project
+    dotnet new web --name PlayerScoreApi
+    dotnet add PlayerScoreApi reference PlayerScoreService
+    # Create dedicated E2E tests
+    dotnet new xunit --name PlayerScoreService.E2E
+    dotnet add PlayerScoreService.E2E reference PlayerScoreApi
+    # Add everything to the solution
+    dotnet sln add PlayerScoreApi
+    dotnet sln add PlayerScoreService.E2E
+    ```
+
 ### Sketches
 
 ![Sketch from lecture](/docs/sketches/tdd-scientific-method-for-engineers.excalidraw.png)
