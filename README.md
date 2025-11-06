@@ -71,7 +71,8 @@ var calc = new Calculator();
 
 ### Sketches
 
-![Sketch from lecture](/docs/sketches/tdd-scientific-method-for-engineers.excalidraw.png)
+![Sketch from first lecture](/docs/sketches/tdd-scientific-method-for-engineers.excalidraw.png)
+![Sketch from contract lecture](/docs/sketches/testing-av-kontrakter.excalidraw.png)
 
 ## Uke 2 SOA
 
