@@ -20,10 +20,15 @@ public class ApiEndToEndTests : IClassFixture<WebApplicationFactory<Program>>
     }
 
     [Fact]
-    public async Task ScoreEndpointExists()
+    public async Task Get_ScoreEndpoint_Exists()
     {
         // Arrange
+        var request = new HttpRequestMessage(HttpMethod.Get, "/score/larsg");
+
         // Act
+        var response = await _client.SendAsync(request);
+
         // Assert
+        response.EnsureSuccessStatusCode();
     }
 }
