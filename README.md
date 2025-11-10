@@ -78,6 +78,34 @@ var calc = new Calculator();
 
 Pakke ned APIen i en container og sett den opp i et Docker Compose system, med ingress og database.
 
+### Hvordan sette sammen ett .NET prosjekt
+
+> [!NOTE]
+>
+> Mange av disse kommandoen har en hel rekke med flag som du kan sende inn. De fleste er for mer komplekse scenarior og ikke noe vi trenger å tenke på her. Viss du er usikker på noen av disse, så husk at du kan få en kort oversikt ved hjelp av:
+>
+> ```sh
+> dotnet <sub-command> --help
+> ```
+
+- Regenerer `obj` mappen og de midlertidige filene som er der
+
+    ```sh
+    dotnet restore
+    ```
+
+- Bygg/Kompiler kildekoden til et prosjekt via den optimaliserte Release konfigurasjonen.
+
+    ```sh
+    dotnet build --configuration Release
+    ```
+
+- Sett sammen alle filen og putt de i en mappe
+
+    ```sh
+    dotnet publish <project> --configuration Release --output <output-sti>
+    ```
+
 ## Uke 3 IaC
 
 Sett opp en server Hetzner og konfigurer den så den kjører Docker Compose manifestet.
