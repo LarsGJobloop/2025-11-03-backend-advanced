@@ -106,6 +106,8 @@ Pakke ned APIen i en container og sett den opp i et Docker Compose system, med i
     dotnet publish <project> --configuration Release --output <output-sti>
     ```
 
+### [Microsoft - Containerize a .NET API](https://learn.microsoft.com/en-us/dotnet/core/docker/build-container?tabs=windows&pivots=dotnet-9-0)
+
 ## Uke 3 IaC
 
 Sett opp en server Hetzner og konfigurer den så den kjører Docker Compose manifestet.
