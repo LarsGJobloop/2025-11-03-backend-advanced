@@ -78,6 +78,14 @@ var calc = new Calculator();
 
 Pakke ned APIen i en container og sett den opp i et Docker Compose system, med ingress og database.
 
+> [!NOTE]
+>
+> Run the local Docker Tutorial
+>
+> ```sh
+> docker run -p 80:80 docker/getting-started
+> ```
+
 ### Hvordan sette sammen ett .NET prosjekt
 
 > [!NOTE]
