@@ -1,7 +1,9 @@
 services:
   player-score:
-    # Referanse til et container bilde fra et Container Register
-    image: ghcr.io/larsgjobloop/myapp
+    # Vi kan bruke lokal Dockerfiler og unngå å gå via et container register
+    build:
+      dockerfile: Dockerfile # Navnet på dockerfilen
+      context: . # Mappen den skal kjøre kommandoen i fra ("." = denne mappen)
     # Koble vertens port 8080 til containers port 8080
     ports:
       - 3000:8080
