@@ -130,6 +130,10 @@ Pakke ned APIen i en container og sett den opp i et Docker Compose system, med i
     docker run --publish 8080:8080 <app-identifier>
     ```
 
+### Arkitekturer og Byggeklosser
+
+![Cheat Sheet](/docs/sketches/architecture-cheat-sheet.excalidraw.png)
+
 ## Uke 3 IaC
 
 Sett opp en server Hetzner og konfigurer den så den kjører Docker Compose manifestet.
