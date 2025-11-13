@@ -31,4 +31,19 @@ public class ApiEndToEndTests : IClassFixture<WebApplicationFactory<Program>>
         // Assert
         response.EnsureSuccessStatusCode();
     }
+
+    [Fact]
+    public async Task Data_IsPersisted_AcrossServerRestarts()
+    {
+        // Arrange
+        // Setup database context and application
+
+        // Act
+        // POST something to server
+        // Restart server
+        // Query for known state
+
+        // Asssert
+        // Check it persisted the data
+    }
 }
