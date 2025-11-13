@@ -9,6 +9,7 @@ services:
       - 3000:8080
 
   database:
+    # Docs Link: https://hub.docker.com/r/bitnami/postgresql
     image: bitnami/postgresql:latest
     # Env vars er miljøvariabler som applikasjon
     # kan lese av og bruke, som oftest til konfigurasjon
@@ -16,6 +17,9 @@ services:
       POSTGRES_USER: admin
       POSTGRES_PASSWORD: password
       POSTGRES_DB: my_db
+    # For persisting data across container restarts
+    volumes:
+      - database:/bitnami/postgresql
 
   # For å koblet til UI til database
   # Bruke ^Brukername og passord fra database tjenesten
@@ -30,3 +34,7 @@ services:
     # Ikke start denne tjenesten før databasen er oppe å gå
     depends_on:
       - database
+
+# This is a named volume adminstered by Docker Desktop/OrbStack
+volumes:
+  database:
