@@ -10,9 +10,19 @@ builder.Services.AddDbContext<ScoreContext>(options =>
 
 var app = builder.Build();
 
-app.MapGet("/score/{playerAlias}", (string playerAlias) =>
+app.MapGet("/score/{playerAlias}", async (string playerAlias, ScoreContext context) =>
 {
-  return new { PlayerAlias = playerAlias };
+  var result = await context.scores.FirstOrDefaultAsync(entry =>
+    entry.playeralias == playerAlias);
+
+  if (result == null)
+  {
+    return Results.NotFound();
+  }
+  else
+  {
+    return Results.Ok(result);
+  }
 });
 
 app.Run();

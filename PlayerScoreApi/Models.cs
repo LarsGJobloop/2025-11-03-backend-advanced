@@ -1,5 +1,8 @@
+using System.ComponentModel.DataAnnotations;
+
 public class ScoreModel
 {
-  public required string PlayerAlias { get; set; }
-  public required int Score { get; set; }
+  [Key]
+  public required string playeralias { get; set; }
+  public required int score { get; set; }
 }
